@@ -10,6 +10,11 @@
 
 <?php wp_body_open(); ?>
 
+<canvas
+    id="canvas"
+    class="fixed inset-0 pointer-events-none z-[9999]"
+></canvas>
+
 <header class="header-reveal fixed top-6 left-0 w-full z-50 px-4 ">
 
     <div class="container">
