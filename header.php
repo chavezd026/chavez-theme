@@ -10,73 +10,125 @@
 
 <?php wp_body_open(); ?>
 
-<header>
-    <nav id="site-navbar" class="fixed top-0 left-0 right-0 z-50 w-full py-4 transition-all duration-300 bg-transparent">
-        <div class="max-w-[1320px] mx-auto px-5">
-            <div class="flex items-center justify-between">
+<header class="fixed top-5 left-0 w-full z-50 px-4">
 
-                <!-- Logo -->
-                <div class="flex items-center gap-4">
-                    <a href="<?php echo esc_url(home_url('/')); ?>"
-                       class="text-2xl font-semibold text-white hover:opacity-80 transition-opacity">
-                        Chavez
+    <div class="container">
+
+        <!-- MOBILE + TABLET -->
+        <div class="xl:hidden">
+
+            <div class="bg-black/80 backdrop-blur-xl border border-white/10 rounded-full px-6 py-4">
+
+                <div class="flex items-center justify-between">
+
+                    <!-- Logo -->
+                    <a
+                        href="<?php echo esc_url(home_url('/')); ?>"
+                        class="font-qurova text-3xl text-white"
+                    >
+                        dchavez
                     </a>
-                </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-7">
-                    <?php
-                    wp_nav_menu([
-                        'theme_location' => 'primary',
-                        'container' => false,
-                        'menu_class' => 'flex items-center gap-7',
-                        'fallback_cb' => false,
-                        'items_wrap' => '%3$s',
-                    ]);
-                    ?>
-                </div>
+                    <!-- Toggle -->
+                    <button
+                        id="menu-toggle"
+                        class="text-white"
+                        aria-label="Toggle Menu"
+                    >
+                        <svg
+                            id="hamburger-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-8 h-8"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </button>
 
-                <!-- CTA -->
-                <div class="hidden md:flex items-center gap-2">
-                    <a href="#contact"
-                       class="cursor-pointer bg-white font-medium text-base overflow-hidden relative z-10 border border-black group px-7 py-3.5 rounded-xl">
-                        <span class="relative z-10  group-hover:text-white duration-500">
-                            Hire Me
-                        </span>
-                        <span class="absolute w-full h-full bg-green-500 -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
-                        <span class="absolute w-full h-full bg-green-500 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
-                    </a>
                 </div>
-
-                <!-- Mobile Toggle -->
-                <button id="mobile-menu-toggle"
-                        class="md:hidden p-4 text-white hover:text-white/80 transition-colors"
-                        aria-label="menu">
-                    ☰
-                </button>
 
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-             class="md:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300">
-            <div class="bg-black/95 backdrop-blur-lg border-t border-white/10 px-5 py-6 space-y-3">
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="hidden mt-4 bg-black/95 backdrop-blur-xl border border-white/10 rounded-3xl p-6"
+            >
 
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'primary',
-                    'container' => false,
-                    'menu_class' => 'space-y-3',
+                    'container'      => false,
+                    'menu_class'     => 'mobile-menu-list',
+                    'fallback_cb'    => false,
                 ]);
                 ?>
 
-                <a href="#contact"
-                   class="block w-full text-center px-7 py-3.5 bg-white text-[#212121] font-medium rounded-xl mt-2">
-                    Hire Me
+                <a
+                    href="#contact"
+                    class="block text-center mt-6 bg-cyan-700 hover:bg-cyan-600 text-white py-4 rounded-full transition-all duration-300"
+                >
+                    Start a Project
                 </a>
 
             </div>
+
         </div>
-    </nav>
+
+        <!-- DESKTOP -->
+        <div class="hidden xl:grid xl:grid-cols-[1fr_auto_1fr] items-center">
+
+            <!-- Logo -->
+            <div class="justify-self-start">
+
+                <a
+                    href="<?php echo esc_url(home_url('/')); ?>"
+                    class="text-2xl font-[Qurova] font-semibol"
+                >
+                    DCHAVEZ
+                </a>
+
+            </div>
+
+            <!-- Center Menu Pill -->
+            <div class="justify-self-center">
+
+                <div class="border border-white/10 rounded-full px-16 py-5 backdrop-blur-xl">
+
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                        'menu_class'     => 'desktop-menu',
+                        'fallback_cb'    => false,
+                    ]);
+                    ?>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="justify-self-end">
+
+                <a
+                    href="#contact"
+                    class="bg-cyan-700 hover:bg-cyan-600 text-white px-10 py-4 rounded-full transition-all duration-300"
+                >
+                    Start a Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </header>

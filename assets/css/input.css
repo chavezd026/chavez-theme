@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Qurova';
+    src: url('../fonts/QurovaDEMO-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roc Grotesk Wide';
+    src: url('../fonts/Roc_Grotesk_Wide.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@layer base {
+
+    html {
+        font-family: 'Roc Grotesk Wide', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+}
+
+@layer utilities {
+
+    .font-qurova {
+        font-family: 'Qurova', sans-serif;
+    }
+
+}
+
+
+@layer components {
+
+    .container{
+        @apply w-full mx-auto px-5 md:px-8 lg:px-12 xl:px-20 2xl:px-[100px];
+    }
+
+
+    .desktop-menu {
+        @apply flex items-center gap-16;
+    }
+
+    .desktop-menu li {
+        @apply list-none;
+    }
+
+    .desktop-menu li a {
+        @apply text-white font-medium text-lg transition-all duration-300;
+    }
+
+    .desktop-menu li a:hover {
+        @apply text-cyan-400;
+    }
+
+    .mobile-menu-list {
+        @apply flex flex-col gap-5;
+    }
+
+    .mobile-menu-list li {
+        @apply list-none;
+    }
+
+    .mobile-menu-list li a {
+        @apply block text-white text-lg font-medium;
+    }
+
+    .mobile-menu-list li a:hover {
+        @apply text-cyan-400;
+    }
+
+}
