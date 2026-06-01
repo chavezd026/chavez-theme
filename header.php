@@ -10,7 +10,7 @@
 
 <?php wp_body_open(); ?>
 
-<header class="fixed top-5 left-0 w-full z-50 px-4">
+<header class="header-reveal fixed top-6 left-0 w-full z-50 px-4 ">
 
     <div class="container">
 
@@ -75,7 +75,7 @@
                     href="#contact"
                     class="block text-center mt-6 bg-cyan-700 hover:bg-cyan-600 text-white py-4 rounded-full transition-all duration-300"
                 >
-                    Start a Project
+                    Hire Me
                 </a>
 
             </div>
@@ -90,7 +90,7 @@
 
                 <a
                     href="<?php echo esc_url(home_url('/')); ?>"
-                    class="text-2xl font-[Qurova] font-semibol"
+                    class="liquid-text text-4xl font-[Qurova] font-semibold tracking-wide bg-gradient-to-r from-cyan-500 via-cyan-300 to-white bg-clip-text text-transparent"
                 >
                     DCHAVEZ
                 </a>
@@ -100,7 +100,7 @@
             <!-- Center Menu Pill -->
             <div class="justify-self-center">
 
-                <div class="border border-white/10 rounded-full px-16 py-5 backdrop-blur-xl">
+                <div class="border-2 border-white/20 bg-white/05 rounded-full px-5 backdrop-blur-[10px] flex flex-row min-h-12">
 
                     <?php
                     wp_nav_menu([
@@ -120,9 +120,9 @@
 
                 <a
                     href="#contact"
-                    class="bg-cyan-700 hover:bg-cyan-600 text-white px-10 py-4 rounded-full transition-all duration-300"
+                    class="bg-cyan-500/90 hover:bg-cyan-500/70 backdrop-blur-md text-white px-10 py-4 rounded-full transition-all duration-300"
                 >
-                    Start a Project
+                    Hire Me
                 </a>
 
             </div>

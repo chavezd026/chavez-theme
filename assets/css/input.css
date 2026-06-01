@@ -12,7 +12,9 @@
 @font-face {
     font-family: 'Roc Grotesk Wide';
     src: url('../fonts/Roc_Grotesk_Wide.otf') format('opentype');
-    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -25,6 +27,8 @@
 
     body {
         background-color: #000;
+        font-size: 16px;
+        line-height: 24px;
         color: #fff;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
@@ -39,6 +43,15 @@
         font-family: 'Qurova', sans-serif;
     }
 
+    .header-reveal {
+        opacity: 0;
+        animation: headerFadeDown 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+    }
+
+    .liquid-text {
+        background-size: 300% 300%;
+        animation: liquidFlow 5s ease-in-out infinite;
+    }
 }
 
 
@@ -50,7 +63,7 @@
 
 
     .desktop-menu {
-        @apply flex items-center gap-16;
+        @apply flex items-center px-4;
     }
 
     .desktop-menu li {
@@ -58,11 +71,11 @@
     }
 
     .desktop-menu li a {
-        @apply text-white font-medium text-lg transition-all duration-300;
+        @apply text-white font-medium transition-all duration-300 px-6;
     }
 
     .desktop-menu li a:hover {
-        @apply text-cyan-400;
+        @apply text-cyan-500;
     }
 
     .mobile-menu-list {
@@ -74,11 +87,51 @@
     }
 
     .mobile-menu-list li a {
-        @apply block text-white text-lg font-medium;
+        @apply block text-white text-lg font-medium text-center;
     }
 
     .mobile-menu-list li a:hover {
-        @apply text-cyan-400;
+        @apply text-cyan-500;
+    }
+
+}
+
+
+@keyframes headerFadeDown {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes liquidFlow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 30%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 70%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 
 }
