@@ -4,4 +4,8 @@
     
 </main>
 
+<?php get_template_part(
+    'template-parts/featured-projects'
+); ?>
+
 <?php get_footer(); ?>

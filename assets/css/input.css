@@ -138,6 +138,22 @@
         @apply text-cyan-500;
     }
 
+
+    .footer-menu-list {
+        @apply flex flex-wrap justify-center gap-8 uppercase;
+    }
+
+    .footer-menu-list a {
+        @apply text-white/70 hover:text-cyan-500 transition-all duration-300;
+    }
+
+    .social-menu-list {
+        @apply flex gap-6 flex-wrap;
+    }
+
+    .social-menu-list a {
+        @apply text-white/70 hover:text-cyan-500 transition-all duration-300;
+    }
 }
 
 

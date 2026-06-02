@@ -105,30 +105,16 @@
 
         <!-- Footer Menu -->
 
-        <nav
-            class="flex flex-wrap
-                   justify-center
-                   gap-8
-                   mt-10
-                   uppercase
-                   text-white/70"
-        >
+        <nav class="footer-menu mt-10">
 
-            <a href="#home" class="hover:text-cyan-500 transition">
-                Home
-            </a>
-
-            <a href="#about" class="hover:text-cyan-500 transition">
-                About
-            </a>
-
-            <a href="#projects" class="hover:text-cyan-500 transition">
-                Projects
-            </a>
-
-            <a href="#contact" class="hover:text-cyan-500 transition">
-                Contact
-            </a>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'footer',
+                'container'      => false,
+                'menu_class'     => 'footer-menu-list',
+                'fallback_cb'    => false,
+            ]);
+            ?>
 
         </nav>
 
@@ -156,10 +142,7 @@
                            md:text-xl
                            max-w-xl"
                 >
-                    Got some exciting ideas?
-                    Let's connect and create
-                    something extraordinary
-                    together.
+                    DCHAVEZ - Legacy, Built with Intent. Driven by creativity, shaped by purpose, crafting exceptional digital experiences.
                 </p>
 
             </div>
@@ -207,23 +190,16 @@
                    pt-8"
         >
 
-            <div class="flex gap-4">
+            <div class="social-menu">
 
-                <a href="#">
-                    Behance
-                </a>
-
-                <a href="#">
-                    LinkedIn
-                </a>
-
-                <a href="#">
-                    Instagram
-                </a>
-
-                <a href="#">
-                    X
-                </a>
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'social',
+                    'container'      => false,
+                    'menu_class'     => 'social-menu-list',
+                    'fallback_cb'    => false,
+                ]);
+                ?>
 
             </div>
 

@@ -116,6 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
             words[current]
         );
 
-    }, 5000);
+    }, 3000);
 
 })();

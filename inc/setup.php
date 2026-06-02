@@ -13,6 +13,7 @@ function chavez_theme_setup() {
     register_nav_menus([
         'primary' => 'Primary Menu',
         'footer'  => 'Footer Menu',
+        'social'  => 'Social Menu',
     ]);
 }
 
