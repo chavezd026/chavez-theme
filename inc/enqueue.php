@@ -31,6 +31,14 @@ function chavez_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/js/canvas-cursor.js'),
         true
     );
+
+    wp_enqueue_script(
+        'magnetic-button',
+        get_template_directory_uri() . '/assets/js/magnetic-button.js',
+        [],
+        filemtime(get_template_directory() . '/assets/js/magnetic-button.js'),
+        true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'chavez_enqueue_assets');
